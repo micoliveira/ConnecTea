@@ -38,7 +38,9 @@ src/
 │   ├── layout/     # Estrutura base (Header, Footer)
 │   └── pages/      # Telas principais (Home, Cadastro, Login, Políticas)
 ├── hooks/          # Custom Hooks (ex: useScrollAnimation para efeitos visuais)
-└── routes/         # Configuração de rotas da aplicação
+└── routes/         # Configuração de rotas da aplicação.
+```
+
 
 ## ⚙️ Como Executar o Projeto Localmente
 
