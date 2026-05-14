@@ -82,4 +82,4 @@ Em conformidade com a legislação vigente, a plataforma assegura aos utilizador
 Sendo um projeto desenvolvido no âmbito do **IFSP - Campus Bragança Paulista**, a base de dados serve como um panorama real para gestores e investigadores, sendo tratada sob princípios éticos de segurança cibernética e governança de dados.
 
 ---
-Para mais detalhes, consulte a nossa página interna de **[Política de Privacidade](http://localhost:5173/politica-privacidade)**.
+Para mais detalhes, consulte a nossa página interna de **[Política de Privacidade](https://connec-tea.vercel.app/politica-privacidade)**.
