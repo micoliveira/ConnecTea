@@ -1,0 +1,68 @@
+/* 1. Estilização base unificada para TODOS os campos de texto, números, datas, selects e áreas de texto */
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: inherit; /* Garante que usa a fonte do projeto (Inter/Roboto) */
+  font-size: 1rem;
+  color: #ffffff; /* Texto branco para o fundo escuro */
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo translúcido */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Garante que o padding não expande a caixa além dos 100% */
+}
+
+/* 2. Ajuste específico para o Select (para ter a setinha e tirar o visual nativo) */
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+}
+
+/* 3. A listinha de opções do select (mantém fundo branco e letra preta para ler) */
+.form-group select option {
+  color: #333333;
+  background-color: #ffffff;
+}
+
+/* 4. Estilo do Placeholder (o texto de dica dentro da caixa) */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* 5. Ícone do calendário no input type="date" (muda para branco) */
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* 6. Efeito de Foco (quando clica na caixa) para TODOS os campos */
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group input[type="date"]:focus,
+.form-group input[type="email"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* 7. Impede que o Textarea seja redimensionado horizontalmente quebrando o layout */
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
