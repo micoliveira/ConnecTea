@@ -10,7 +10,7 @@ export function Step5Saude({ data, updateData }) {
       <p className="form-subtitle">Informações sobre acesso a serviços de saúde e rede de apoio.</p>
       
       <div className="form-group">
-        <label htmlFor="planoSaude">Acesso a serviços de saúde: *</label>
+        <label htmlFor="planoSaude">Acesso a serviços de saúde: <span className="obrigatorio">*</span></label>
         <select 
           id="planoSaude" 
           name="planoSaude" 

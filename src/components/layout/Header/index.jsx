@@ -20,6 +20,7 @@ export function Header() {
             <li><a href="/#impacto">Por que Cadastrar</a></li>
             <li><a href="/#equipe">Responsáveis</a></li>
             <li><a href="/#contato">Contato</a></li>
+            <li><Link to="/dados">Dados do Censo</Link></li>
           </ul>
         </nav>
         

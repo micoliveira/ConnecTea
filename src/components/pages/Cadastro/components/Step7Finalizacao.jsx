@@ -10,12 +10,12 @@ export function Step7Finalizacao({ data, updateData }) {
       <p className="form-subtitle">Espaço para observações adicionais e finalização do cadastro.</p>
       
       <div className="form-group">
-        <label htmlFor="observacoesGerais">Observações Gerais:</label>
-        <textarea 
-          id="observacoesGerais" 
-          name="observacoesGerais" 
-          value={data.observacoesGerais || ''} 
-          onChange={handleChange} 
+        <label htmlFor="observacoes">Observações Gerais:</label>
+        <textarea
+          id="observacoes"
+          name="observacoes"
+          value={data.observacoes || ''}
+          onChange={handleChange}
           rows="6"
           placeholder="Use este espaço para relatar qualquer informação importante que não foi mencionada nas seções anteriores..."
         ></textarea>

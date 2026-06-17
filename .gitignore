@@ -11,6 +11,11 @@ node_modules
 dist
 dist-ssr
 *.local
+connectea-backend/connectea.db
+
+# Python
+__pycache__/
+*.py[cod]
 
 # Editor directories and files
 .vscode/*

@@ -4,12 +4,11 @@ import mainImg from '../../../../assets/images/main.svg';
 import main2Img from '../../../../assets/images/main2.jpeg';
 import main3Img from '../../../../assets/images/main3.jpeg';
 
-// Separamos os dados dos slides para deixar o código mais limpo
 const slides = [
   {
     title: "Junto construímos um futuro mais inclusivo",
     description: "Cadastre sua família no Censo Autista de Bragança Paulista. Seus dados são fundamentais para o desenvolvimento de políticas públicas que atendam às reais necessidades da comunidade autista.",
-    buttonText: "Acessar Sistema",
+    buttonText: "Cadastre-se",
     buttonLink: "/login",
     image: mainImg
   },

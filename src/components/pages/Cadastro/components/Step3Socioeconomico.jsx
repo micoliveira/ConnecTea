@@ -11,7 +11,7 @@ export function Step3Socioeconomico({ data, updateData }) {
       
       <div className="form-row">
         <div className="form-group">
-          <label htmlFor="rendaFamiliar">Renda Familiar Mensal: *</label>
+          <label htmlFor="rendaFamiliar">Renda Familiar Mensal: <span className="obrigatorio">*</span></label>
           <select 
             id="rendaFamiliar" 
             name="rendaFamiliar" 
@@ -28,7 +28,7 @@ export function Step3Socioeconomico({ data, updateData }) {
         </div>
         
         <div className="form-group">
-          <label htmlFor="pessoasResidencia">Nº de pessoas na residência: *</label>
+          <label htmlFor="pessoasResidencia">Nº de pessoas na residência: <span className="obrigatorio">*</span></label>
           <input 
             type="number" 
             id="pessoasResidencia" 
@@ -44,7 +44,7 @@ export function Step3Socioeconomico({ data, updateData }) {
       </div>
 
       <div className="form-group">
-        <label htmlFor="beneficioGoverno">A pessoa com TEA recebe algum benefício do governo? (Ex: BPC/LOAS, Bolsa Família) *</label>
+        <label htmlFor="beneficioGoverno">A pessoa com TEA recebe algum benefício do governo? (Ex: BPC/LOAS, Bolsa Família) <span className="obrigatorio">*</span></label>
         <select 
           id="beneficioGoverno" 
           name="beneficioGoverno" 
@@ -62,7 +62,7 @@ export function Step3Socioeconomico({ data, updateData }) {
       </div>
 
       <div className="form-group">
-        <label htmlFor="situacaoMoradia">Situação de Moradia: *</label>
+        <label htmlFor="situacaoMoradia">Situação de Moradia: <span className="obrigatorio">*</span></label>
         <select 
           id="situacaoMoradia" 
           name="situacaoMoradia" 

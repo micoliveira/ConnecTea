@@ -11,7 +11,7 @@ export function Step4Educacao({ data, updateData }) {
       
       <div className="form-row">
         <div className="form-group">
-          <label htmlFor="nivelEscolaridade">Nível de Escolaridade Atual: *</label>
+          <label htmlFor="nivelEscolaridade">Nível de Escolaridade Atual: <span className="obrigatorio">*</span></label>
           <select 
             id="nivelEscolaridade" 
             name="nivelEscolaridade" 
@@ -30,7 +30,7 @@ export function Step4Educacao({ data, updateData }) {
         </div>
         
         <div className="form-group">
-          <label htmlFor="tipoEscola">Tipo de Instituição: *</label>
+          <label htmlFor="tipoEscola">Tipo de Instituição: <span className="obrigatorio">*</span></label>
           <select 
             id="tipoEscola" 
             name="tipoEscola" 
@@ -48,7 +48,7 @@ export function Step4Educacao({ data, updateData }) {
       </div>
 
       <div className="form-group">
-        <label htmlFor="mediadorEscolar">Possui Acompanhante Terapêutico (AT) ou Mediador Escolar? *</label>
+        <label htmlFor="mediadorEscolar">Possui Acompanhante Terapêutico (AT) ou Mediador Escolar? <span className="obrigatorio">*</span></label>
         <select 
           id="mediadorEscolar" 
           name="mediadorEscolar" 

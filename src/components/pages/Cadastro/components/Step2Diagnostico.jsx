@@ -26,7 +26,7 @@ export function Step2Diagnostico({ data, updateData }) {
         </div>
         
         <div className="form-group">
-          <label htmlFor="nivelSuporte">Nível de Suporte (TEA): *</label>
+          <label htmlFor="nivelSuporte">Nível de Suporte (TEA): <span className="obrigatorio">*</span></label>
           <select 
             id="nivelSuporte" 
             name="nivelSuporte" 
@@ -44,15 +44,47 @@ export function Step2Diagnostico({ data, updateData }) {
       </div>
 
       <div className="form-group">
-        <label htmlFor="profissionais">Profissionais de saúde que acompanham (Neurologista, Psicólogo, Fonoaudiólogo, etc.):</label>
-        <textarea 
-          id="profissionais" 
-          name="profissionais" 
-          value={data.profissionais || ''} 
-          onChange={handleChange} 
-          rows="3"
-          placeholder="Descreva os profissionais e as terapias atuais..."
-        ></textarea>
+        <label>A pessoa com TEA é acompanhada por algum profissional de saúde?</label>
+        <p className="form-subtitle">Se sim, informe os dados do profissional abaixo (Neurologista, Psicólogo, Fonoaudiólogo, etc.).</p>
+      </div>
+
+      <div className="form-row">
+        <div className="form-group">
+          <label htmlFor="profissionalNome">Nome:</label>
+          <input
+            type="text"
+            id="profissionalNome"
+            name="profissionalNome"
+            value={data.profissionalNome || ''}
+            onChange={handleChange}
+            placeholder="Ex: Dra. Juliana Mendes"
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="profissionalEspecialidade">Especialidade:</label>
+          <input
+            type="text"
+            id="profissionalEspecialidade"
+            name="profissionalEspecialidade"
+            value={data.profissionalEspecialidade || ''}
+            onChange={handleChange}
+            placeholder="Ex: Fonoaudióloga"
+          />
+        </div>
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="profissionalTelefone">Telefone:</label>
+        <input
+          type="tel"
+          id="profissionalTelefone"
+          name="profissionalTelefone"
+          value={data.profissionalTelefone || ''}
+          onChange={handleChange}
+          placeholder="(11) 99999-9999"
+          maxLength="15"
+        />
       </div>
 
       <div className="form-group">

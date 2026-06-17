@@ -1,85 +1,136 @@
-# 🧩 Censo Autista - Bragança Paulista
+# Censo Autista – ConnecTea
 
-O **Censo Autista** é uma aplicação web desenvolvida como parte de um projeto de pesquisa e extensão vinculado ao Instituto Federal de São Paulo (IFSP) - Campus Bragança Paulista. 
-
-O objetivo da plataforma é realizar o mapeamento demográfico, socioeconômico e clínico da comunidade autista local. Os dados coletados visam subsidiar a criação de políticas públicas direcionadas, identificar demandas por serviços de saúde e educação, e fortalecer a rede de apoio na região.
-
-## ✨ Funcionalidades
-
-* **Página Inicial (Landing Page):** Apresentação do projeto com animações de rolagem (scroll) fluidas criadas via IntersectionObserver.
-* **Formulário de Cadastro em Múltiplas Etapas:** Um fluxo de coleta de dados dividido em 7 passos para melhor experiência do usuário, com gerenciamento de estado centralizado para não perder os dados ao avançar ou retroceder:
-  1. Informações Gerais
-  2. Diagnóstico e Acompanhamento
-  3. Perfil Socioeconômico
-  4. Educação e Escolaridade
-  5. Saúde e Terapias
-  6. Rotina e Características
-  7. Finalização e Observações
-* **Páginas Institucionais:** Política de Privacidade (adequada à LGPD) e Termos de Uso.
-* **Navegação SPA (Single Page Application):** Transições rápidas e sem recarregamento de página utilizando React Router.
-
-## 🚀 Tecnologias Utilizadas
-
-Este projeto foi construído utilizando as seguintes tecnologias:
-
-* **[React](https://reactjs.org/):** Biblioteca JavaScript para construção da interface de usuário baseada em componentes.
-* **[Vite](https://vitejs.dev/):** Ferramenta de build super rápida para projetos web modernos.
-* **[React Router DOM](https://reactrouter.com/):** Gerenciamento de rotas e navegação.
-* **CSS3:** Estilização global e modularizada com design responsivo e componentes translúcidos modernos.
-
-## 📁 Estrutura do Projeto
-
-A arquitetura do código foi pensada focando em Clean Code e componentização:
-
-```text
-src/
-├── assets/         # Imagens, ícones e arquivos CSS globais
-├── components/     # Componentes reaproveitáveis (Layouts, Páginas)
-│   ├── layout/     # Estrutura base (Header, Footer)
-│   └── pages/      # Telas principais (Home, Cadastro, Login, Políticas)
-├── hooks/          # Custom Hooks (ex: useScrollAnimation para efeitos visuais)
-└── routes/         # Configuração de rotas da aplicação.
-```
-
-
-## ⚙️ Como Executar o Projeto Localmente
-
-Siga os passos abaixo para configurar o ambiente de desenvolvimento na sua máquina.
-
-### 📋 Pré-requisitos
-
-Antes de começar, certifique-se de que tem as seguintes ferramentas instaladas:
-* [Node.js](https://nodejs.org/) (Versão 18 ou superior)
-* [Git](https://git-scm.com/)
-* Um gestor de pacotes (npm ou yarn)
-
-### 🚀 Passo a Passo
-
-1. **Clonar o Repositório**
-   Abra o terminal e execute o comando para clonar o projeto:
-   ```bash
-   git clone [https://github.com/micoliveira/ConnecTea.git](https://github.com/micoliveira/ConnecTea.git)
-
-## 🛡️ Privacidade e Proteção de Dados (LGPD)
-
-O **ConnecTea** foi desenvolvido com foco na segurança da informação e na privacidade dos participantes, assegurando total conformidade com a **Lei Geral de Proteção de Dados Pessoais (LGPD - Lei nº 13.709/2018)**.
-
-### 🔐 Compromisso com a Segurança
-Dada a natureza sensível dos dados recolhidos — que incluem informações de saúde, diagnóstico e perfil socioeconómico — a plataforma adota camadas de proteção para garantir a integridade e a confidencialidade das informações:
-
-* **Finalidade Específica:** Os dados são recolhidos exclusivamente para fins estatísticos e de investigação académica, visando o desenvolvimento de políticas públicas em Bragança Paulista.
-* **Tratamento de Dados Sensíveis:** O projeto aplica normas rigorosas de segurança no tratamento de informações sobre o Transtorno do Espectro Autista (TEA), garantindo que o acesso seja restrito e controlado.
-* **Transparência:** O utilizador tem total clareza sobre quais dados estão a ser recolhidos em cada uma das 7 etapas do formulário.
-
-### 📋 Direitos do Utilizador
-Em conformidade com a legislação vigente, a plataforma assegura aos utilizadores os direitos de:
-1.  **Acesso e Confirmação:** Saber se existe tratamento dos seus dados.
-2.  **Correção:** Solicitar a alteração de dados incompletos ou inexatos.
-3.  **Eliminação:** Requerer a exclusão de dados tratados sob consentimento.
-4.  **Revogação:** Cancelar o consentimento de participação a qualquer momento.
-
-### 🔬 Rigor Académico e Técnico
-Sendo um projeto desenvolvido no âmbito do **IFSP - Campus Bragança Paulista**, a base de dados serve como um panorama real para gestores e investigadores, sendo tratada sob princípios éticos de segurança cibernética e governança de dados.
+Plataforma web desenvolvida no **IFSP - Campus Bragança Paulista** para coletar e centralizar dados demográficos, socioeconômicos e clínicos da comunidade autista local. Os dados coletados visam subsidiar políticas públicas municipais.
 
 ---
-Para mais detalhes, consulte a nossa página interna de **[Política de Privacidade](https://connec-tea.vercel.app)**.
+
+## Tecnologias
+
+| Camada | Tecnologia |
+|--------|-----------|
+| Frontend | React 19, React Router 7, Vite |
+| Backend | Python 3, Flask |
+| Banco de dados | SQLite3 |
+| Estilização | CSS3 puro |
+
+---
+
+## Estrutura do Projeto
+
+```
+ConnecTea-main/
+├── connectea-backend/      # API Flask
+│   ├── app.py              # Servidor Flask com classes OOP
+│   ├── schema.sql          # Definição das 6 tabelas
+│   ├── queries.sql         # 12 consultas SQL para BDD
+│   └── criar_banco.py      # Script para criar o banco SQLite3
+└── src/                    # Frontend React
+    ├── components/
+    │   ├── layout/         # Header e Footer
+    │   └── pages/          # Home, Login, Cadastro, Dados, Políticas
+    ├── services/api.js     # Integração com a API Flask
+    └── routes/             # Configuração de rotas
+```
+
+---
+
+## Como executar localmente
+
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org/) 18+
+- [Python](https://python.org/) 3.10+
+- Git
+
+---
+
+### 1. Backend (Flask + SQLite3)
+
+```bash
+# Entre na pasta do backend
+cd connectea-backend
+
+# Instale as dependências Python
+pip install flask
+
+# Crie o banco de dados SQLite3
+python criar_banco.py
+
+# Inicie o servidor (porta 5000)
+python app.py
+```
+
+O backend estará disponível em `http://localhost:5000`.
+
+---
+
+### 2. Frontend (React)
+
+Em outro terminal, na raiz do projeto:
+
+```bash
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento (porta 5173)
+npm run dev
+```
+
+Acesse `http://localhost:5173` no navegador.
+
+> **Importante:** os dois servidores precisam estar rodando ao mesmo tempo para o formulário funcionar.
+
+---
+
+## Rotas da aplicação
+
+| Rota | Descrição |
+|------|-----------|
+| `/` | Página inicial (landing page) |
+| `/login` | Login e cadastro de responsável |
+| `/formulario` | Formulário do censo (7 etapas) |
+| `/dados` | Dashboard com as 4 tabelas do banco |
+| `/politica-privacidade` | Política de privacidade (LGPD) |
+| `/termos-de-uso` | Termos de uso |
+
+---
+
+## Banco de Dados
+
+6 tabelas com relacionamentos 1:1, 1:N e N:N:
+
+```
+RESPONSAVEL (1) ──< (N) PESSOA_TEA (1) ──── (1) PERFIL_CLINICO
+                              │         └──── (1) PERFIL_CENSO
+                              │
+                              └──< (N) ACOMPANHAMENTO >── (N) PROFISSIONAL_SAUDE
+```
+
+---
+
+## Endpoints da API
+
+| Método | Rota | Descrição |
+|--------|------|-----------|
+| POST | `/api/responsavel` | Cadastrar responsável |
+| GET | `/api/responsaveis` | Listar responsáveis |
+| POST | `/api/pessoa` | Cadastrar pessoa com TEA |
+| GET | `/api/pessoas` | Listar pessoas |
+| GET | `/api/pessoa/<id>` | Buscar pessoa por ID |
+| POST | `/api/profissional` | Cadastrar profissional |
+| GET | `/api/profissionais` | Listar profissionais |
+| POST | `/api/acompanhamento` | Registrar acompanhamento |
+| GET | `/api/acompanhamentos/<id>` | Listar acompanhamentos por pessoa |
+| GET | `/api/dados` | Todos os dados para o dashboard |
+
+---
+
+## Equipe
+
+- David Miquéias Santos Paixão
+- Fernando Henrique Camargo
+- Letícia Zavazi de Almeida
+- Lucas Nogueira Sanchez
+- Michele Maria de Oliveira
+
+**IFSP - Campus Bragança Paulista | 2026**

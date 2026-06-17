@@ -22,7 +22,7 @@ export function Step6Rotina({ data, updateData }) {
 
       <div className="form-row">
         <div className="form-group">
-          <label htmlFor="rotinaSono">Qualidade do Sono: *</label>
+          <label htmlFor="rotinaSono">Qualidade do Sono: <span className="obrigatorio">*</span></label>
           <select 
             id="rotinaSono" 
             name="rotinaSono" 
@@ -39,7 +39,7 @@ export function Step6Rotina({ data, updateData }) {
         </div>
         
         <div className="form-group">
-          <label htmlFor="seletividadeAlimentar">Seletividade Alimentar: *</label>
+          <label htmlFor="seletividadeAlimentar">Seletividade Alimentar: <span className="obrigatorio">*</span></label>
           <select 
             id="seletividadeAlimentar" 
             name="seletividadeAlimentar" 
@@ -57,7 +57,7 @@ export function Step6Rotina({ data, updateData }) {
       </div>
 
       <div className="form-group">
-        <label htmlFor="comunicacao">Forma de comunicação predominante: *</label>
+        <label htmlFor="comunicacao">Forma de comunicação predominante: <span className="obrigatorio">*</span></label>
         <select 
           id="comunicacao" 
           name="comunicacao" 
