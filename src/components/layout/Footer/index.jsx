@@ -12,7 +12,7 @@ export function Footer() {
           <h3>Contato</h3>
           <ul className="contact-list">
             <li><a href="mailto:censoautista@ifsp.edu.br"><span>📧</span> censoautista@ifsp.edu.br</a></li>
-            <li><a href="tel:+55112039XXXX"><span>📞</span> (11) 2039-XXXX</a></li>
+            <li><a href="tel:+551140028922"><span>📞</span> (11) 4002-8922</a></li>
             <li><span>📍</span> Bragança Paulista</li>
           </ul>
         </div>

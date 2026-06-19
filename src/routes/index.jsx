@@ -4,7 +4,8 @@ import { Home } from '../components/pages/Home';
 import { Login } from '../components/pages/Login';
 import { Cadastro } from '../components/pages/Cadastro';
 import { Formulario } from '../components/pages/Formulario';
-import { Dados } from '../components/pages/Dados';
+import { Dashboard } from '../components/pages/Dashboard';
+import { RequireAdmin } from '../components/RequireAdmin';
 import { PoliticaPrivacidade } from '../components/pages/Politicas';
 import { TermosDeUso } from '../components/pages/Politicas/TermosDeUso';
 
@@ -17,7 +18,7 @@ export const router = createBrowserRouter([
       { path: '/login',                element: <Login /> },
       { path: '/cadastro',             element: <Cadastro /> },
       { path: '/formulario',           element: <Formulario /> },
-      { path: '/dados',                element: <Dados /> },
+      { path: '/dashboard',            element: <RequireAdmin><Dashboard /></RequireAdmin> },
       { path: '/politica-privacidade', element: <PoliticaPrivacidade /> },
       { path: '/termos-de-uso',        element: <TermosDeUso /> },
     ],

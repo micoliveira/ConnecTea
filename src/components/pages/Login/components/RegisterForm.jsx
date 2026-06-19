@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from '../../../hooks/useForm';
 import { cadastrarResponsavel } from '../../../../services/api';
+import { PasswordField } from './PasswordField';
 
 export function RegisterForm({ onSwitch }) {
   const navigate = useNavigate();
@@ -100,8 +101,7 @@ export function RegisterForm({ onSwitch }) {
       <div className="form-row">
         <div className="form-group">
           <label htmlFor="registerPassword">Senha</label>
-          <input
-            type="password"
+          <PasswordField
             id="registerPassword"
             name="password"
             value={values.password}
@@ -112,8 +112,7 @@ export function RegisterForm({ onSwitch }) {
         </div>
         <div className="form-group">
           <label htmlFor="registerConfirmPassword">Confirmar senha</label>
-          <input
-            type="password"
+          <PasswordField
             id="registerConfirmPassword"
             name="confirmPassword"
             value={values.confirmPassword}
@@ -138,7 +137,6 @@ export function RegisterForm({ onSwitch }) {
             name="terms"
             checked={values.terms}
             onChange={handleChange}
-            required
           />
           <span>
             Aceito os <a href="/termos-de-uso">termos de uso</a> e{' '}

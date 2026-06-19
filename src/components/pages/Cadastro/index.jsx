@@ -26,7 +26,7 @@ export function Cadastro() {
   };
 
   const handleNext = () => {
-    // Só avança se todos os campos obrigatórios da etapa atual estiveremválidos. reportValidity() valida apenas o que está renderizado e já exibe as mensagens nativas no primeiro campo vazio.
+    // Só avança se todos os campos obrigatórios da etapa atual estiveremválidos. reportValidity()
     if (formRef.current && !formRef.current.reportValidity()) return;
 
     if (currentStep < totalSteps) setCurrentStep((prev) => prev + 1);

@@ -107,3 +107,25 @@ export async function enviarCenso(formData) {
 export async function buscarDados() {
   return req("/dados");
 }
+
+// Editar / apagar dados do dashboard e bdd 
+export async function atualizarResponsavel(id, dados) {
+  return req(`/responsavel/${id}`, { method: "PUT", body: JSON.stringify(dados) });
+}
+export async function excluirResponsavel(id) {
+  return req(`/responsavel/${id}`, { method: "DELETE" });
+}
+
+export async function atualizarPessoa(id, dados) {
+  return req(`/pessoa/${id}`, { method: "PUT", body: JSON.stringify(dados) });
+}
+export async function excluirPessoa(id) {
+  return req(`/pessoa/${id}`, { method: "DELETE" });
+}
+
+export async function atualizarProfissional(id, dados) {
+  return req(`/profissional/${id}`, { method: "PUT", body: JSON.stringify(dados) });
+}
+export async function excluirProfissional(id) {
+  return req(`/profissional/${id}`, { method: "DELETE" });
+}

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { fazerLogin } from '../../../../services/api';
 import { ForgotPasswordModal } from '../../../ForgotPasswordModal';
+import { PasswordField } from './PasswordField';
 
 export function LoginForm({ onSwitch }) {
   const navigate = useNavigate();
@@ -15,6 +16,14 @@ export function LoginForm({ onSwitch }) {
     e.preventDefault();
     setErro('');
     setCarregando(true);
+
+    // Acesso ao dashboard do site (admin/admin)
+    if (email.trim().toLowerCase() === 'admin' && senha === 'admin') {
+      sessionStorage.setItem('admin', 'true');
+      setCarregando(false);
+      navigate('/dashboard');
+      return;
+    }
 
     try {
       await fazerLogin(email, senha);
@@ -35,7 +44,7 @@ export function LoginForm({ onSwitch }) {
         <div className="form-group">
           <label htmlFor="loginEmail">E-mail</label>
           <input
-            type="email"
+            type="text"
             id="loginEmail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -46,8 +55,7 @@ export function LoginForm({ onSwitch }) {
 
         <div className="form-group">
           <label htmlFor="loginPassword">Senha</label>
-          <input
-            type="password"
+          <PasswordField
             id="loginPassword"
             value={senha}
             onChange={(e) => setSenha(e.target.value)}

@@ -39,9 +39,11 @@ export function Step4Educacao({ data, updateData }) {
             required
           >
             <option value="">Selecione...</option>
-            <option value="publica_municipal">Pública Municipal</option>
+            <option value="publica_federal">Pública Federal</option>
             <option value="publica_estadual">Pública Estadual</option>
+            <option value="publica_municipal">Pública Municipal</option>
             <option value="privada">Privada / Particular</option>
+            <option value="filantropica">Filantrópica / ONG</option>
             <option value="nao_se_aplica">Não se aplica</option>
           </select>
         </div>

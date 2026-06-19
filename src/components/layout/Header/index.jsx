@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../../assets/images/logo.png';
-//import './styles.css'; // Se optar por separar o CSS por componente
+//import './styles.css';
 
 export function Header() {
   const location = useLocation();
@@ -20,7 +20,6 @@ export function Header() {
             <li><a href="/#impacto">Por que Cadastrar</a></li>
             <li><a href="/#equipe">Responsáveis</a></li>
             <li><a href="/#contato">Contato</a></li>
-            <li><Link to="/dados">Dados do Censo</Link></li>
           </ul>
         </nav>
         

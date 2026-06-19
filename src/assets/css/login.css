@@ -114,6 +114,37 @@
 .form-group input::placeholder {
     color: rgba(255, 255, 255, 0.4);
 }
+/* senha mostrar/ocultar */
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+.password-wrapper input[type="password"],
+.password-wrapper input[type="text"] {
+    width: 100%;
+    padding-right: 46px;
+    box-sizing: border-box;
+}
+.toggle-senha {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: var(--text-color);
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+.toggle-senha:hover {
+    opacity: 1;
+}
 /* Opções */
 .form-options {
     display: flex;

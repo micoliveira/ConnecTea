@@ -7,7 +7,7 @@ export function DefaultLayout() {
     <>
       <Header />
       <main>
-        <Outlet /> {/* Aqui entrará o conteúdo das páginas (Home, Cadastro, etc) */}
+        <Outlet /> {/*(Home, Cadastro, etc) */}
       </main>
       <Footer />
     </>

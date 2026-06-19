@@ -2,9 +2,8 @@ import membro1 from '../../../../assets/images/membro1.jpeg';
 import membro2 from '../../../../assets/images/membro2.jpeg';
 import membro3 from '../../../../assets/images/membro3.jpeg';
 import membro4 from '../../../../assets/images/membro4.jpeg';
-import membro5 from '../../../../assets/images/membro5.jpeg'; // A imagem da Michele
+import membro5 from '../../../../assets/images/membro5.jpeg'; 
 
-// Array de dados: Clean Code em ação!
 const teamMembers = [
   { id: 1, name: 'David Santos', photo: membro1 },
   { id: 2, name: 'Fernando Camargo', photo: membro2 },
