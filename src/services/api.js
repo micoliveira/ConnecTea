@@ -1,4 +1,7 @@
-const BASE = "http://127.0.0.1:5000/api";
+// Em produção (Vercel), defina VITE_API_URL nas Environment Variables do
+// projeto, por exemplo: https://api.seudominio.com.br/api
+// Em desenvolvimento local, sem nada definido, cai no Flask local.
+const BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000/api";
 
 async function req(rota, opcoes = {}) {
   const resposta = await fetch(`${BASE}${rota}`, {
@@ -106,26 +109,4 @@ export async function enviarCenso(formData) {
 // Busca todos os dados para o dashboard
 export async function buscarDados() {
   return req("/dados");
-}
-
-// Editar / apagar dados do dashboard e bdd 
-export async function atualizarResponsavel(id, dados) {
-  return req(`/responsavel/${id}`, { method: "PUT", body: JSON.stringify(dados) });
-}
-export async function excluirResponsavel(id) {
-  return req(`/responsavel/${id}`, { method: "DELETE" });
-}
-
-export async function atualizarPessoa(id, dados) {
-  return req(`/pessoa/${id}`, { method: "PUT", body: JSON.stringify(dados) });
-}
-export async function excluirPessoa(id) {
-  return req(`/pessoa/${id}`, { method: "DELETE" });
-}
-
-export async function atualizarProfissional(id, dados) {
-  return req(`/profissional/${id}`, { method: "PUT", body: JSON.stringify(dados) });
-}
-export async function excluirProfissional(id) {
-  return req(`/profissional/${id}`, { method: "DELETE" });
 }
