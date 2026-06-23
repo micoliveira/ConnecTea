@@ -110,3 +110,48 @@ export async function enviarCenso(formData) {
 export async function buscarDados() {
   return req("/dados");
 }
+
+// Atualizar Responsável
+export async function atualizarResponsavel(id, dados) {
+  return req(`/responsavel/${id}`, {
+    method: "PUT",
+    body: JSON.stringify(dados),
+  });
+}
+
+// Excluir Responsável
+export async function excluirResponsavel(id) {
+  return req(`/responsavel/${id}`, {
+    method: "DELETE",
+  });
+}
+
+// Atualizar Pessoa
+export async function atualizarPessoa(id, dados) {
+  return req(`/pessoa/${id}`, {
+    method: "PUT",
+    body: JSON.stringify(dados),
+  });
+}
+
+// Excluir Pessoa
+export async function excluirPessoa(id) {
+  return req(`/pessoa/${id}`, {
+    method: "DELETE",
+  });
+}
+
+// Atualizar Profissional
+export async function atualizarProfissional(id, dados) {
+  return req(`/profissional/${id}`, {
+    method: "PUT",
+    body: JSON.stringify(dados),
+  });
+}
+
+// Excluir Profissional
+export async function excluirProfissional(id) {
+  return req(`/profissional/${id}`, {
+    method: "DELETE",
+  });
+}
